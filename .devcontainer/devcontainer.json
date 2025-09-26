@@ -1,15 +1,1 @@
-{
-  "name": "Zola Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/rust:1": {},
-    "ghcr.io/devcontainers/features/common-utils:1": {}
-  },
-  "postCreateCommand": "cargo install zola",
-  "customizations": {
-    "vscode": {
-      "settings": {},
-      "extensions": []
-    }
-  }
-}
+{"name":"Zola Dev Container","image":"rust:latest","features":{"ghcr.io/devcontainers/features/common-utils:1":{}},"postCreateCommand":"cargo install zola && zola --version","forwardPorts":[1111],"customizations":{"vscode":{"settings":{},"extensions":["rust-lang.rust-analyzer","matklad.toml","yzhang.markdown-all-in-one"]}}}
