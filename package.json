@@ -1,0 +1,24 @@
+{
+  "name": "anmorris-org-next",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "vite:dev": "vite",
+    "vite:build": "tsc && vite build",
+    "vite:preview": "vite preview",
+    "zola:dev": "zola serve --port 8080",
+    "zola:build": "zola build",
+    "start": "pnpm run dev",
+    "dev": "pnpm run \"/.*:dev$/\""
+  },
+  "devDependencies": {
+    "prettier": "^3.8.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
