@@ -6,7 +6,7 @@ export default defineConfig({
   publicDir: false,
   build: {
     lib: {
-      entry: ["src/main.js"],
+      entry: ["themes/anmorris-2026/src/main.ts"],
       fileName: "main",
       formats: ["es"],
     },

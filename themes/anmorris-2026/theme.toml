@@ -1,0 +1,9 @@
+name = "anmorris-2026"
+description = "Custom theme for anmorris.org"
+license = "MIT"
+homepage = "https://anmorris.org"
+min_version = "0.19.0"
+
+[author]
+name = "Adam N. Morris"
+homepage = "https://anmorris.org"

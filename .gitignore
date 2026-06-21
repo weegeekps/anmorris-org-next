@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+public
+
+# Pi Agent Skills
+# Ignore community-downloaded skills and lockfiles to prevent accidental commits
+.pi/skills/*
+skills-lock.json
+
+# Whitelist locally authored/custom skills
+!.pi/skills/zola/

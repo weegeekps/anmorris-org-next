@@ -1,5 +1,7 @@
 # The URL the site will be built for
 base_url = "https://anmorris.org"
+title = "anmorris.org"
+theme = "anmorris-2026"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
