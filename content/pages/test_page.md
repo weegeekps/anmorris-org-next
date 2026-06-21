@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: 2026 Copyright 2026, Adam N. Morris
+#
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
 title: "Zola Markdown Test Page"
 date: 2026-06-20
 description: "A comprehensive test of all Zola-supported Markdown features"
