@@ -10,7 +10,7 @@ export default defineConfig({
       fileName: "main",
       formats: ["es"],
     },
-    outDir: "./public",
+    outDir: "./static/bundle",
     emptyOutDir: false,
     manifest: true,
     assetsDir: "",

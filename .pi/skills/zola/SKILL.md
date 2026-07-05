@@ -125,6 +125,26 @@ If a section is paginated (`paginate_by > 0`), `section.pages` is empty — iter
 
 Sorting: pages missing the field required by their section's `sort_by` are skipped (and warned). Sorted pages expose `page.lower` / `page.higher` (and `page.earlier`/`page.later` for date). Use the Tera `reverse` filter to flip order (or `paginate_reversed = true` for paginated sections).
 
+### File searching logic
+
+For built-in functions that search for physical files on disk (excluding template-only lookups or resource resolution like `get_page`/`get_section` which use content-relative paths), Zola searches the following locations in order and uses the first match:
+
+1. `$base_directory` + `$path`
+2. `$base_directory` + `"static/"` + `$path`
+3. `$base_directory` + `"content/"` + `$path`
+4. `$base_directory` + `$output_path` + `$path`
+5. `$base_directory` + `"themes/"` + `$theme` + `"static/"` + `$path` (only if a theme is active)
+
+**Implications & Equivalence:**
+The paths `@/some/image.jpg`, `/content/some/image.jpg`, and `content/some/image.jpg` all resolve to the same underlying file (`$base_directory/content/some/image.jpg`). It is an error if a path resolves to a location outside the Zola project directory.
+
+**Functions using this logic:**
+- `get_url(path=...)` — when `cachebust=true` is used (requires physical file to compute cachebust hash).
+- `get_hash(path=...)` — to hash a file (e.g. for Subresource Integrity signatures).
+- `get_image_metadata(path=...)` — to query dimensions, format, MIME type, etc.
+- `load_data(path=...)` — when reading local files (TOML, JSON, CSV, BibTeX, CommonMark/text).
+- `resize_image(path=...)` — when processing images.
+
 ## Internal links & anchors
 
 In **Markdown**, link to other content with `@/` paths starting from `content/`:
