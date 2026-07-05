@@ -1,10 +1,14 @@
+// SPDX-FileCopyrightText: 2026 Copyright 2026, Adam N. Morris
+//
+// SPDX-License-Identifier: GPL-3.0-only
+
 import js from "@eslint/js";
 import ts from "typescript-eslint";
 
-export default ts.config(
-    js.configs.recommended,
-    ts.configs.recommended,
-    {
-        files: ["themes/anmorris-2026/src/**/*.ts"],
-    },
-);
+export default [
+  js.configs.recommended,
+  ...ts.configs.recommended,
+  {
+    files: ["**/*.js", "**/*.ts"],
+  },
+];

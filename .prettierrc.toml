@@ -1,1 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Copyright 2026, Adam N. Morris
+#
+# SPDX-License-Identifier: GPL-3.0-only
+
 singleQuote = false
+plugins = ["prettier-plugin-jinja-template"]
+
+[[overrides]]
+files = ["*.html"]
+options.parser = "jinja-template"

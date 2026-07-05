@@ -6,7 +6,7 @@ tags: [markdown, test, zola]
 draft: false
 weight: 10
 extra:
-  author: "Site Author"
+    author: "Site Author"
 ---
 
 # Zola Markdown Feature Test Page
@@ -27,19 +27,24 @@ This page tests all Markdown features supported by Zola (via the **pulldown-cmar
 ```
 
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### Heading 4
+
 ##### Heading 5
+
 ###### Heading 6
 
 ---
 
 ## Text Formatting
 
-**Bold text** and ***bold italic*** and ~~strikethrough~~.
+**Bold text** and **_bold italic_** and ~~strikethrough~~.
 
-*Italic text* and __underline is not standard Markdown but ___triple underscore___ tests edge cases__.*
+_Italic text_ and **underline is not standard Markdown but \_**triple underscore**\_ tests edge cases**.\*
 
 - [x] task list completed
 - [ ] task list pending
@@ -71,13 +76,13 @@ if __name__ == "__main__":
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Test</title>
-</head>
-<body>
-    <h1 id="top">Hello</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test</title>
+    </head>
+    <body>
+        <h1 id="top">Hello</h1>
+    </body>
 </html>
 ```
 
@@ -133,37 +138,37 @@ ls -la /tmp
 
 - Item A
 - Item B
-  - Sub-item B1
-  - Sub-item B2
-    - Deeply nested
+    - Sub-item B1
+    - Sub-item B2
+        - Deeply nested
 - Item C
-  1. Ordered sub-item 1
-  2. Ordered sub-item 2
+    1. Ordered sub-item 1
+    2. Ordered sub-item 2
 - Item D
 
 ### Ordered List
 
 1. First
 2. Second
-   1. Nested A
-   2. Nested B
+    1. Nested A
+    2. Nested B
 3. Third
 
 ### Table
 
-| Feature | Supported | Notes |
-| --- | :--: | --- |
-| Headings | ✅ | H1–H6 |
-| Bold / Italic | ✅ | |
-| Strikethrough | ✅ | via `~~text~~` |
-| Task Lists | ✅ | via `- [x]` |
-| Footnotes | ⚠️ | CommonMark footnote syntax |
-| Fenced Code | ✅ | With language hints |
-| Blockquotes | ✅ | Nested |
-| Tables | ✅ | GFM-style |
-| Auto-links | ✅ | `<https://...>` |
-| HTML inline | ✅ | Raw HTML passes through |
-| HTML blocks | ✅ | Raw HTML blocks pass through |
+| Feature       | Supported | Notes                        |
+| ------------- | :-------: | ---------------------------- |
+| Headings      |    ✅     | H1–H6                        |
+| Bold / Italic |    ✅     |                              |
+| Strikethrough |    ✅     | via `~~text~~`               |
+| Task Lists    |    ✅     | via `- [x]`                  |
+| Footnotes     |    ⚠️     | CommonMark footnote syntax   |
+| Fenced Code   |    ✅     | With language hints          |
+| Blockquotes   |    ✅     | Nested                       |
+| Tables        |    ✅     | GFM-style                    |
+| Auto-links    |    ✅     | `<https://...>`              |
+| HTML inline   |    ✅     | Raw HTML passes through      |
+| HTML blocks   |    ✅     | Raw HTML blocks pass through |
 
 ---
 
@@ -181,9 +186,9 @@ ___
 
 ---
 
-***
+---
 
-___
+---
 
 ### HTML Passthrough (raw HTML allowed in Zola)
 
@@ -228,7 +233,7 @@ Term 2
 
 ```html
 <figure>
-    <img src="https://placedog.net/600/400" alt="Another dog photo">
+    <img src="https://placedog.net/600/400" alt="Another dog photo" />
     <figcaption>Fig.1 — A different dog via HTML figure tag.</figcaption>
 </figure>
 ```
@@ -254,8 +259,9 @@ Another reference: [Colon][colon].
 
 Here is a footnote reference[^1] and another[^note2].
 
-[^note2]: This is the second footnote definition.
-It can span **multiple lines** with full Markdown formatting.
+[^note2]:
+    This is the second footnote definition.
+    It can span **multiple lines** with full Markdown formatting.
 
 ---
 
@@ -306,16 +312,16 @@ The HTML `<abbr>` tag can contain an abbreviation:
 
 Your front matter (YAML) was parsed by Zola. Available in templates:
 
-| Variable | Value | Source |
-| --- | --- | --- |
-| `title` | Zola Markdown Test Page | Front matter |
-| `date` | 2024-01-15 | Front matter |
-| `draft` | false | Front matter |
-| `weight` | 10 | Front matter |
-| `tags` | [markdown, test, zola] | Front matter |
-| `extra.author` | Site Author | Front matter `extra` |
-| `content` | This entire rendered document | Zola variable |
-| `path` | test_page (derived) | Zola variable |
+| Variable       | Value                         | Source               |
+| -------------- | ----------------------------- | -------------------- |
+| `title`        | Zola Markdown Test Page       | Front matter         |
+| `date`         | 2024-01-15                    | Front matter         |
+| `draft`        | false                         | Front matter         |
+| `weight`       | 10                            | Front matter         |
+| `tags`         | [markdown, test, zola]        | Front matter         |
+| `extra.author` | Site Author                   | Front matter `extra` |
+| `content`      | This entire rendered document | Zola variable        |
+| `path`         | test_page (derived)           | Zola variable        |
 
 You can access `{{ page.extra.author }}`, `{{ page.date }}`, etc. in templates.
 
@@ -350,4 +356,4 @@ The site's search index (enabled by `build_search_index = true` in `zola.toml`) 
 
 ---
 
-*Last updated on 2026-06-20. This is a **Zola Markdown Test Page**.*
+_Last updated on 2026-06-20. This is a **Zola Markdown Test Page**._

@@ -2,8 +2,14 @@
 name: zola
 description: Build, structure, and edit Zola static sites. Use when working with Zola SSG projects — creating or editing content (Markdown + TOML front matter), Tera templates, sections/pages, shortcodes, internal links, zola.toml configuration, or running the Zola CLI (init, build, serve, check).
 metadata:
-  source: Official Zola documentation (https://www.getzola.org/documentation/), based on Zola 0.19.x+
+    source: Official Zola documentation (https://www.getzola.org/documentation/), based on Zola 0.19.x+
 ---
+
+<!--
+SPDX-FileCopyrightText: 2026 Copyright 2026, Adam N. Morris
+
+SPDX-License-Identifier: GPL-3.0-only
+-->
 
 # Zola
 
@@ -23,6 +29,7 @@ zola check             # Build in-memory (no output) and validate internal + ext
 ```
 
 Common flags:
+
 - `zola build --base-url $URL` — override `base_url` (useful for deploy previews).
 - `zola build --output-dir <dir>` / `--force` — change output dir; force overwrite.
 - `zola --config config.staging.toml build` — alternate config (position matters: before the subcommand).
@@ -51,6 +58,7 @@ Logging: `RUST_LOG=zola=info,site=debug` for timing; `RUST_LOG=off` to silence.
 **Section** = a directory containing `_index.md`. Defines metadata + listing behavior for its pages. The site root is always a section (add `content/_index.md` to give the homepage content/metadata).
 
 **Page** = any `.md` file except `_index.md`. (File names must not contain `_index.` at all.)
+
 - `content/about.md` → `[base_url]/about`
 - `content/about/index.md` → `[base_url]/about` (enables asset co-location)
 - Filenames starting with a date (`YYYY-MM-DD` or RFC3339) set the page date: `2019-11-27-hello.md` → `/hello` with date `2019-11-27`.
@@ -62,6 +70,7 @@ Non-Markdown files in a content directory become the section/page `assets` colle
 Every content file needs `+++` delimiters (TOML), even if empty. (YAML with `---` is also supported for legacy porting, but TOML is encouraged.) No individual variable is mandatory.
 
 Section `_index.md` (key variables, defaults shown):
+
 ```toml
 +++
 title = ""
@@ -82,6 +91,7 @@ generate_feeds = false
 ```
 
 Page `.md` (key variables):
+
 ```toml
 +++
 title = ""
@@ -139,6 +149,7 @@ For built-in functions that search for physical files on disk (excluding templat
 The paths `@/some/image.jpg`, `/content/some/image.jpg`, and `content/some/image.jpg` all resolve to the same underlying file (`$base_directory/content/some/image.jpg`). It is an error if a path resolves to a location outside the Zola project directory.
 
 **Functions using this logic:**
+
 - `get_url(path=...)` — when `cachebust=true` is used (requires physical file to compute cachebust hash).
 - `get_hash(path=...)` — to hash a file (e.g. for Subresource Integrity signatures).
 - `get_image_metadata(path=...)` — to query dimensions, format, MIME type, etc.
@@ -148,10 +159,12 @@ The paths `@/some/image.jpg`, `/content/some/image.jpg`, and `content/some/image
 ## Internal links & anchors
 
 In **Markdown**, link to other content with `@/` paths starting from `content/`:
+
 ```markdown
 [About](@/pages/about.md)
 [Heading](@/pages/about.md#section-id)
 ```
+
 Broken internal links are errors by default; set `internal_level = "warn"` under `[link_checker]` in `zola.toml` to downgrade.
 
 Headings auto-get slug ids. Override manually: `# Title {#custom-id .class}`. Auto anchor links are controlled by `insert_anchor_links` ("left"/"right"/"heading"/"none"), globally in `[markdown]` or per-section front matter; override the template with `templates/anchor-link.html`.
@@ -161,22 +174,27 @@ Headings auto-get slug ids. Override manually: `# Title {#custom-id .class}`. Au
 Templates in `templates/shortcodes/` callable from Markdown. `.html` shortcodes inject HTML; `.md` shortcodes flow into the page body (and into the TOC). Name/args must match `^[A-Za-z_][0-9A-Za-z_]+$`.
 
 Without body (Tera-function style, parentheses required even with no args):
+
 ```markdown
 {{ youtube(id="dQw4w9WgXcQ", autoplay=true) }}
 ```
+
 With body (`body` variable holds the inner content, must start on a new line):
+
 ```markdown
 {% quote(author="Vincent") %}
 A quote
 {% end %}
 ```
-Notes: all args are required and named; shortcodes can't reference Tera variables or use operators. Shortcodes render *before* Markdown parse, so `get_page`/`get_section`/`get_taxonomy` and the page TOC are unavailable. Context vars: `nth`, `lang`, `page`/`section`, `config`, `page.colocated_path`. Escape literals with `{{/* */}}` and `{%/* */%}`.
+
+Notes: all args are required and named; shortcodes can't reference Tera variables or use operators. Shortcodes render _before_ Markdown parse, so `get_page`/`get_section`/`get_taxonomy` and the page TOC are unavailable. Context vars: `nth`, `lang`, `page`/`section`, `config`, `page.colocated_path`. Escape literals with `{{/* */}}` and `{%/* */%}`.
 
 ## Configuration (zola.toml)
 
 Only `base_url` is mandatory; everything else is optional and off by default. Watch which TOML section a key belongs to (a `[section]` header runs until the next header/EOF). Sections: main (unnamed), `[markdown]`, `[link_checker]`, `[slugify]`, `[search]`, `[translations]`, `[languages]`, `[extra]`.
 
 Frequently used keys:
+
 ```toml
 base_url = "https://mywebsite.com"   # required
 title = ""
@@ -202,6 +220,7 @@ external_links_target_blank = false
 **Slugify** strategies (`[slugify]` → `paths`/`taxonomies`/`anchors`): `"on"` (full ASCII slug, default), `"safe"` (only strip OS-illegal chars, keeps UTF-8), `"off"` (no change). Use `safe`/`off` for non-ASCII URLs.
 
 ## Workflow tips
+
 - Iterate with `zola serve` (live reload); restart it if a change isn't picked up (some changes can't hot-reload).
 - Run `zola check` before deploying to catch broken links.
 - Treat `public/` as build output only — never hand-edit it.

@@ -1,11 +1,23 @@
 version = 1
 
+# License for configuration files that can't have comments.
+# Since configuration files are "functional", the are appropriately covered
+# under the GPL-3.0-only license.
+# Reference: https://guides.lib.utexas.edu/copyright/licenses
+[[annotations]]
+path = [".nvmrc", "**/*.json", "pnpm-lock.yaml" ]
+SPDX-FileCopyrightText = "2026 Copyright 2026, Adam N. Morris"
+SPDX-License-Identifier = "GPL-3.0-only"
+
+# Content is all under a Creative Commons license, except for code samples,
+# which are covered under MIT.
 [[annotations]]
 path = "content/**/*.md"
 SPDX-FileCopyrightText = "2026 Copyright 2026, Adam N. Morris"
-SPDX-License-Identifier = "CC-BY-SA-4.0"
+SPDX-License-Identifier = ["CC-BY-SA-4.0", "MIT"]
+
 
 [[annotations]]
-path = "Besley-*.ttf"
+path = "static/fonts/Besley-*.ttf"
 SPDX-FileCopyrightText = "Copyright 2020 The Besley Project Authors (https://github.com/indestructible-type/Besley)"
 SPDX-License-Identifier = "OFL-1.1"

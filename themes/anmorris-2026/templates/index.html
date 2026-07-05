@@ -2,13 +2,10 @@
 SPDX-FileCopyrightText: 2026 Copyright 2026, Adam N. Morris
 SPDX-License-Identifier: CC-BY-SA-4.0
 #}
-
 {% extends "base.html" %}
 
 {% block title %}{{ config.title }}{% endblock title %}
 
 {% block main %}
-<div>
-    {{ section.content | safe }}
-</div>
+    <div>{{ section.content | safe }}</div>
 {% endblock main %}

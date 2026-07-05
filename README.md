@@ -1,16 +1,22 @@
+<!--
+SPDX-FileCopyrightText: 2026 Copyright 2026, Adam N. Morris
+
+SPDX-License-Identifier: GPL-3.0-only
+-->
+
 # anmorris-org-next
 
 This repo contains the Zola site-generator and content for [anmorris.org](https://anmorris.org).
 
 ## Project Structure
 
-| Path | Purpose |
-|---|---|
-| `content/` | Site pages and blog posts. Never AI-generated. |
+| Path                    | Purpose                                                                                         |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `content/`              | Site pages and blog posts. Never AI-generated.                                                  |
 | `themes/anmorris-2026/` | Active custom Zola theme. Contains all Tera templates. Update `theme` in `zola.toml` to switch. |
-| `src/` | TypeScript and CSS entry points, compiled by Vite. |
-| `static/` | Fonts, images, and other static assets. |
-| `public/` | Auto-generated build output. Never edit by hand. |
+| `src/`                  | TypeScript and CSS entry points, compiled by Vite.                                              |
+| `static/`               | Fonts, images, and other static assets.                                                         |
+| `public/`               | Auto-generated build output. Never edit by hand.                                                |
 
 > [!IMPORTANT]
 > Files in `content/` are never AI-generated or AI-edited. All site and blog content is written by hand.

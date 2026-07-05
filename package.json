@@ -10,6 +10,7 @@
     "zola:dev": "zola serve --port 8080",
     "zola:build": "zola build",
     "lint": "eslint src/",
+    "format": "prettier --write **/*.html",
     "start": "pnpm run dev",
     "dev": "pnpm run \"/.*:dev$/\""
   },
@@ -17,6 +18,7 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.5.0",
     "prettier": "^3.8.4",
+    "prettier-plugin-jinja-template": "^2.2.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.61.1",
     "vite": "^8.0.16"
