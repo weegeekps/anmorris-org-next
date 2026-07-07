@@ -9,10 +9,13 @@
     "vite:preview": "vite preview",
     "zola:dev": "zola serve --port 8080",
     "zola:build": "zola build",
-    "lint": "eslint src/",
-    "format": "prettier --write **/*.html",
+    "check:lint": "eslint **/src/**/*",
+    "check:format": "prettier -c **/*.{html,js,ts,json}",
+    "check": "pnpm run \"/^check:.*/\"",
+    "format": "prettier --write **/*.{html,js,ts,json}",
     "start": "pnpm run dev",
-    "dev": "pnpm run \"/.*:dev$/\""
+    "dev": "pnpm run \"/.*:dev$/\"",
+    "build": "pnpm run \"/.*:build$/\""
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

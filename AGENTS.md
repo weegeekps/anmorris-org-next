@@ -40,3 +40,7 @@ There are currently no unit tests to run.
 - We are not using SASS.
 - Always favor first-party documentation over third-party resources. That means favor the documentation located in this repo and the official docs for Zola, TypeScript, Tailwind, Lit, xstate, and pnpm. If you use a third-party resource, make it clear that you did.
 - **Focus and Scope Boundaries**: Be extremely precise and focus only on the specific task assigned. Never unilaterally make changes, create files, edit configurations, or implement proactive fixes outside the strict boundaries of the assigned task without explicit user approval. Instead, note any discovered issues/gaps and report them to the user at the end of the task.
+
+## 3. Additional Guidance
+
+- When writing files, validate the path before you write. If you're providing an absolute path or the path includes `anmorris-org-next`, it's probably wrong.

@@ -71,7 +71,7 @@ pnpm run zola:build
 Run both for a full production build.
 
 > [!WARNING]
-> Run `vite:build` before `zola:build`. Vite outputs a manifest into `public/`, which `zola build` will wipe if run first.
+> Run `vite:build` before `zola:build`. Vite outputs the bundle and a manifest into `static/bundle/`, which `zola build` reads at render time.
 
 ## Coding Agents
 

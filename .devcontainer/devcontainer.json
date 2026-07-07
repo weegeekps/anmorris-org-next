@@ -1,12 +1,20 @@
 {
-  "name": "Zola Dev Container",
-  "image": "rust:latest",
-  "features": { "ghcr.io/devcontainers/features/common-utils:1": {} },
-  "postCreateCommand": "cargo install zola && zola --version",
+  "name": "anmorris.org Dev Container",
+  "image": "almalinux:10",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "24.16.0"
+    },
+    "ghcr.io/devcontainers-extra/features/pnpm:2": {
+      "version": "10.33.0"
+    },
+    "./zola": {}
+  },
+  "postCreateCommand": "pnpm install",
   "forwardPorts": [1111],
   "customizations": {
     "vscode": {
-      "settings": {},
       "extensions": [
         "rust-lang.rust-analyzer",
         "matklad.toml",
