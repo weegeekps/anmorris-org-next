@@ -7,6 +7,7 @@ draft: false
 weight: 10
 extra:
     author: "Site Author"
+    math_mode: true
 ---
 
 # Zola Markdown Feature Test Page
@@ -267,7 +268,7 @@ Here is a footnote reference[^1] and another[^note2].
 
 ## Inline Math (via KaTeX — theme-dependent)
 
-Inline formula: `$E = mc^2$` and `$\sum_{i=1}^{n} x_i$`.
+Inline formula: $E = mc^2$ and $\sum_{i=1}^{n} x_i$.
 
 Display (block) math:
 

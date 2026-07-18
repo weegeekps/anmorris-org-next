@@ -10,8 +10,10 @@ export default defineConfig({
   publicDir: false,
   build: {
     lib: {
-      entry: ["themes/anmorris-2026/src/main.ts"],
-      fileName: "main",
+      entry: {
+        main: "themes/anmorris-2026/src/main.ts",
+        math: "themes/anmorris-2026/src/math.ts",
+      },
       formats: ["es"],
     },
     outDir: "./static/bundle",

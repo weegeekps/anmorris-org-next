@@ -7,7 +7,7 @@
     "vite:dev": "vite",
     "vite:build": "tsc && vite build",
     "vite:preview": "vite preview",
-    "zola:dev": "zola serve --port 8080",
+    "zola:dev": "zola serve --port 8080 --base-url http://localhost:8080",
     "zola:build": "zola build",
     "check:lint": "eslint **/src/**/*",
     "check:format": "prettier -c **/*.{html,js,ts,json}",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/katex": "^0.16.8",
     "eslint": "^10.5.0",
     "prettier": "^3.8.4",
     "prettier-plugin-jinja-template": "^2.2.0",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.1",
+    "katex": "^0.18.0",
     "tailwindcss": "^4.3.1"
   }
 }
