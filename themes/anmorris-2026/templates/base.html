@@ -7,10 +7,10 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        {% set is_dev = config.base_url is starting_with("http://localhost") %}
+        {% set is_dev = config.base_url is starting_with(pat="http://localhost") %}
         {% if not is_dev %}
             {% set manifest = load_data(path='bundle/.vite/manifest.json') %}
-            {% set style_entry = manifest["style.css"] %}
+            {% set style_entry = manifest["themes/anmorris-2026/src/style.css"] %}
             <link
                 rel="stylesheet"
                 href="{{ get_url(path='bundle/' ~ style_entry.file) | safe }}"
@@ -41,7 +41,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
                 ></script>
             {% endif %}
 
-            {% if page.extra.math_mode or section.extra.math_mode %}
+            {% if page is defined and (page.extra.math_mode or section.extra.math_mode) %}
                 {% if is_dev %}
                     <script type="module" src="http://localhost:8081/themes/anmorris-2026/src/math.ts"></script>
                 {% else %}

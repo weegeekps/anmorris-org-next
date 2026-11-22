@@ -208,9 +208,6 @@ This content is inside a native HTML `<details>/<summary>` tag. Zola does not st
     This is a styled div — inline HTML with attributes renders unmodified in Zola.
 </div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-<figcaption style="text-align:center; font-style:italic; font-size:0.85em;">Embedded YouTube video</figcaption>
-
 ### Definition List (GFM / Extended syntax)
 
 Term 1
