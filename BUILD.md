@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2026 Adam N. Morris
+SPDX-FileContributor: Adam N. Morris
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Build Process
 
 Two independent toolchains produce one site.

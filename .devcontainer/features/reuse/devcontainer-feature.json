@@ -1,0 +1,8 @@
+{
+  "id": "reuse-epel-10",
+  "version": "1.0.0",
+  "name": "ReUSE for EPEL 10 distributions",
+  "description": "Installs Free Software Foundation Europe's ReUSE tool to EPEL 10 distributions.",
+  "documentationURL": "https://github.com/fsfe/reuse-tool",
+  "keywords": ["fsfe", "reuse", "linter", "foss", "open source", "license"]
+}

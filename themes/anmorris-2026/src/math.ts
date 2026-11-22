@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Adam N. Morris
+//
+// SPDX-License-Identifier: GPL-3.0-only
+
 import "katex/dist/katex.min.css";
 import renderMathInElement from "katex/contrib/auto-render/auto-render.js";
 import katex from "katex";

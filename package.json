@@ -1,7 +1,7 @@
 {
   "name": "anmorris-org-next",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "vite:dev": "vite",
@@ -9,9 +9,10 @@
     "vite:preview": "vite preview",
     "zola:dev": "zola serve --port 8080 --base-url http://localhost",
     "zola:build": "zola build",
+    "check:reuse": "reuse lint",
     "check:lint": "eslint **/src/**/*",
     "check:format": "prettier -c **/*.{html,js,ts,json}",
-    "check": "pnpm run \"/^check:.*/\"",
+    "check": "pnpm run --sequential \"/^check:.*/\"",
     "format": "prettier --write **/*.{html,js,ts,json}",
     "start": "pnpm run dev",
     "dev": "pnpm run \"/.*:dev$/\"",

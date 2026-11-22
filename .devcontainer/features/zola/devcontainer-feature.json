@@ -1,0 +1,7 @@
+{
+  "id": "zola",
+  "version": "0.23.6",
+  "name": "Zola",
+  "description": "Installs Zola v0.23.6 (x86_64-unknown-linux-gnu) with sha256 verification.",
+  "keywords": ["zola", "ssg", "static-site-generator"]
+}

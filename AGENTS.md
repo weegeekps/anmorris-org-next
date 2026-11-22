@@ -1,7 +1,8 @@
 <!--
-SPDX-FileCopyrightText: 2026 Copyright 2026, Adam N. Morris
+SPDX-FileCopyrightText: 2026 Adam N. Morris
+SPDX-FileContributor: Adam N. Morris
 
-SPDX-License-Identifier: GPL-3.0-only
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Project Instructions

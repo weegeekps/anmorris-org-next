@@ -4,12 +4,13 @@
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers/features/node:2": {
-      "version": "24.16.0"
+      "version": "26.13.1"
     },
     "ghcr.io/devcontainers-extra/features/pnpm:2": {
-      "version": "10.33.0"
+      "version": "12.21.0"
     },
-    "./zola": {}
+    "./features/reuse": {},
+    "./features/zola": {}
   },
   "postCreateCommand": "pnpm install",
   "forwardPorts": [1111],
