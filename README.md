@@ -9,6 +9,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 This repo contains the Zola site-generator and content for [anmorris.org](https://anmorris.org).
 
+> [!IMPORTANT]
+> Before using any content in this repository, please read the [License](#license) section at the end of this document.
+
 ## Project Structure
 
 | Path                    | Purpose                                                                                         |
@@ -93,3 +96,14 @@ npx skills add statelyai/skills --skill xstate-v5 -a pi
 <!-- TODO: Fill in the Deployment Section -->
 
 Once automated, high-level details of the deployment process will be shared here.
+
+# License
+
+Content in this repository is covered under several different licenses. This repository uses [REUSE](https://reuse.software/) to help manage this and add clarity. All source code and text content within this repository has a copyright string and a SPDX license annotation at the top of the file. Copyrights and license indications for other media, such as images, 3D models, fonts, and other non-text content is located within the [REUSE.toml](./REUSE.toml) file.
+
+Below are a few _guidelines_ about how various content is typically licensed. You are still responsible for checking the included copyright and license information.
+
+- All code for the site itself is covered under the [GPL 3.0](./LICENSES/GPL-3.0-only.txt) license.
+- Articles, original images, and other media located in the `./content` directory tree is licensed under [CC BY-SA 4.0](./LICENSES/CC-BY-SA-4.0.txt).
+- Code samples used in blog articles located in the `./content` directory are typically licensed under the [MIT](./LICENSES/MIT.txt) license.
+- The logo, favicon, and related assets are licensed under [CC BY-ND 4.0](./LICENSES/CC-BY-ND-4.0.txt).

@@ -1,0 +1,22 @@
+<!--
+SPDX-FileCopyrightText: 2026 Adam N. Morris
+
+SPDX-License-Identifier: CC-BY-ND-4.0
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" role="img" aria-label="ANM">
+    <style>
+        @media (prefers-color-scheme: dark) {
+            .a { fill: "#f3f4f6" }
+        }
+    </style>
+    <g class="a" fill="#101828">
+        <polygon points="10,110 55,10 79,10 34,110" />
+        <polygon points="85,10 107,110 83,110 77.3,84 51.7,84 58.9,68 73.8,68 68.9,45.8" />
+        <polygon points="121,10 145,10 113,110 103.2,65.6" />
+        <polygon points="151,10 173,110 149,110 136.8,54.4" />
+        <polygon points="187,10 211,10 179,110 169.2,65.6" />
+        <polygon points="217,10 235.5,94 211.5,94 202.8,54.4" />
+        <polygon points="259.5,10 283.5,10 241.5,94 234.2,60.7" />
+        <polygon points="289.5,10 269.5,110 245.5,110 249.5,90" />
+    </g>
+</svg>

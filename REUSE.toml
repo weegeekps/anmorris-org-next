@@ -5,7 +5,7 @@ version = 1
 # under the GPL-3.0-only license.
 # Reference: https://guides.lib.utexas.edu/copyright/licenses
 [[annotations]]
-path = [".nvmrc", ".htmlhintrc", "**/*.json", "pnpm-lock.yaml"]
+path = [".nvmrc", ".htmlhintrc", "**/*.json", "pnpm-lock.yaml", "static/manifest.webmanifest"]
 SPDX-FileCopyrightText = "2026 Adam N. Morris"
 SPDX-License-Identifier = "GPL-3.0-only"
 
@@ -24,3 +24,16 @@ SPDX-License-Identifier = "OFL-1.1"
 path = ["static/fonts/FiraCode-*.ttf"]
 SPDX-FileCopyrightText = "Copyright 2014-2020 The Fira Code Project Authors (https://github.com/tonsky/FiraCode)"
 SPDX-License-Identifier = "OFL-1.1"
+
+# The logo has more restrictions
+[[annotations]]
+path = [
+    "static/anm-logo.png",
+    "static/apple-touch-icon.png",
+    "static/favicon.ico",
+    "static/icon-192.png",
+    "static/icon-512.png",
+    "static/icon-mask.png"
+]
+SPDX-FileCopyrightText = "2026 Adam N. Morris"
+SPDX-License-Identifier = "CC-BY-ND-4.0"

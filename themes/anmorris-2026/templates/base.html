@@ -18,6 +18,15 @@ SPDX-License-Identifier: GPL-3.0-only
             />
         {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/anm-logo.svg"
+            type="image/svg+xml"
+        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
         {% block head %}{% endblock head %}
     </head>
