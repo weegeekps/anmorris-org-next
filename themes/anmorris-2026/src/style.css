@@ -162,7 +162,6 @@
     line-height: var(--text-base--line-height);
     color: var(--color-gray-900);
     margin-bottom: calc(var(--spacing) * 2);
-    max-width: 90ch;
   }
 
   ul,

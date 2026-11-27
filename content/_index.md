@@ -6,9 +6,6 @@
 title = "anmorris.org"
 +++
 
-# Welcome to anmorris.org
-
-
 {% <quote author="Edsger W. Dijkstra"> %}
 Computer Science is no more about computers than astronomy is about telescopes.
 {% </quote> %}

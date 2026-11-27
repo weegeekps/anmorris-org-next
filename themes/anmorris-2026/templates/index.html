@@ -8,5 +8,7 @@ SPDX-License-Identifier: GPL-3.0-only
 {% block title %}{{ config.title }}{% endblock title %}
 
 {% block main %}
-    <div>{{ section.content | safe }}</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+        <div>{{ section.content | safe }}</div>
+    </div>
 {% endblock main %}

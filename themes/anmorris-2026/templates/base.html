@@ -29,12 +29,10 @@ SPDX-License-Identifier: GPL-3.0-only
     </head>
     <body class="container mx-auto max-w-5xl flex flex-col">
         <main class="grow">
-            {% block header %}
-            {% endblock header %}
+            {% include "partials/header.html" %}
             {% block main %}
             {% endblock main %}
-            {% block footer %}
-            {% endblock footer %}
+            {% include "partials/footer.html" %}
         </main>
         {% block scripts %}
             {% if is_dev %}

@@ -19,4 +19,9 @@ build_search_index = true
 theme = "catppuccin-mocha"
 
 [extra]
-# Put all your custom variables here
+# Copyright year is programmatic and comes before the rest of this string.
+copyright = "Adam N. Morris"
+copyright_start_year = 2021
+
+# TODO: Update this with the final repo location after archive of old repo.
+github_repo = "https://github.com/weegeekps/anmorris-org-next"
