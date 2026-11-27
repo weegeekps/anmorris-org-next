@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Adam N. Morris
+#
+# SPDX-License-Identifier: GPL-3.0-only
+
+profile = "tera"
+ignore_blocks = "component"
+preserve_blank_lines = true
+close_void_tags = true

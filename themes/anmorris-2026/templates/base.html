@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2026 Adam N. Morris
 SPDX-License-Identifier: GPL-3.0-only
 #}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -12,27 +12,25 @@ SPDX-License-Identifier: GPL-3.0-only
         {% if not is_dev %}
             {% set manifest = load_data(path='bundle/.vite/manifest.json') %}
             {% set style_entry = manifest["themes/anmorris-2026/src/style.css"] %}
-            <link
-                rel="stylesheet"
-                href="{{ get_url(path='bundle/' ~ style_entry.file) | safe }}"
-            />
+            <link rel="stylesheet"
+                  href="{{ get_url(path='bundle/' ~ style_entry.file) | safe }}" />
         {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link
-            rel="icon"
-            type="image/svg+xml"
-            href="/anm-logo.svg"
-            type="image/svg+xml"
-        />
+        <link rel="icon"
+              type="image/svg+xml"
+              href="/anm-logo.svg"
+              type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-        {% block head %}{% endblock head %}
+        {% block head %}
+        {% endblock head %}
     </head>
     <body class="container mx-auto max-w-5xl flex flex-col">
-        <main class="flex-grow">
-            {% block header %}{% endblock header %}
+        <main class="grow">
+            {% block header %}
+            {% endblock header %}
             {% block main %}
             {% endblock main %}
             {% block footer %}
@@ -40,34 +38,23 @@ SPDX-License-Identifier: GPL-3.0-only
         </main>
         {% block scripts %}
             {% if is_dev %}
-                <script
-                    type="module"
-                    src="http://localhost:8081/@vite/client"
-                ></script>
-                <script
-                    type="module"
-                    src="http://localhost:8081/themes/anmorris-2026/src/main.ts"
-                ></script>
+                <script type="module" src="http://localhost:8081/@vite/client"></script>
+                <script type="module"
+                        src="http://localhost:8081/themes/anmorris-2026/src/main.ts"></script>
             {% else %}
                 {% set main_entry = manifest["themes/anmorris-2026/src/main.ts"] %}
-                <script
-                    type="module"
-                    src="{{ get_url(path='bundle/' ~ main_entry.file) | safe }}"
-                ></script>
+                <script type="module"
+                        src="{{ get_url(path='bundle/' ~ main_entry.file) | safe }}"></script>
             {% endif %}
 
             {% if page is defined and (page.extra.math_mode or section.extra.math_mode) %}
                 {% if is_dev %}
-                    <script
-                        type="module"
-                        src="http://localhost:8081/themes/anmorris-2026/src/math.ts"
-                    ></script>
+                    <script type="module"
+                            src="http://localhost:8081/themes/anmorris-2026/src/math.ts"></script>
                 {% else %}
                     {% set math_entry = manifest["themes/anmorris-2026/src/math.ts"] %}
-                    <script
-                        type="module"
-                        src="{{ get_url(path='bundle/' ~ math_entry.file) | safe }}"
-                    ></script>
+                    <script type="module"
+                            src="{{ get_url(path='bundle/' ~ math_entry.file) | safe }}"></script>
                 {% endif %}
             {% endif %}
         {% endblock scripts %}

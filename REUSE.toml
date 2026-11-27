@@ -16,7 +16,7 @@ SPDX-FileCopyrightText = "Copyright 2007 indestructible type* (https://indestruc
 SPDX-License-Identifier = "OFL-1.1"
 
 [[annotations]]
-path = ["static/fonts/SourceSans3VF-*.ttf"]
+path = ["static/fonts/SourceSans3VF-*.otf.woff2"]
 SPDX-FileCopyrightText = "Copyright 2010-2024 Adobe (https://github.com/adobe-fonts/source-sans)"
 SPDX-License-Identifier = "OFL-1.1"
 

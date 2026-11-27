@@ -18,21 +18,21 @@ importers:
         specifier: ^4.3.5
         version: 4.3.5
     devDependencies:
+      '@biomejs/biome':
+        specifier: 2.6.9
+        version: 2.6.9
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.15.0(jiti@2.7.0))
       '@types/katex':
         specifier: ^0.16.8
         version: 0.16.8
+      djlint:
+        specifier: ^1.54.0
+        version: 1.54.0
       eslint:
         specifier: ^10.15.0
         version: 10.15.0(jiti@2.7.0)
-      prettier:
-        specifier: ^3.10.1
-        version: 3.10.1
-      prettier-plugin-jinja-template:
-        specifier: ^2.2.0
-        version: 2.2.0(prettier@3.10.1)
       typescript:
         specifier: ~6.0.3
         version: 6.0.3
@@ -45,11 +45,147 @@ importers:
 
 packages:
 
+  '@biomejs/biome@2.6.9':
+    resolution: {integrity: sha512-RelCBDzTXu4DBU8c35P4iMrDO80SUjW0OgjDA7CT1z3UcCU5IclWTZ2XnMelI4frQL//xg2K2BQxAhcOKxdPQA==}
+    engines: {node: '>=14.21.3'}
+    hasBin: true
+
+  '@biomejs/cli-android-arm64@2.6.9':
+    resolution: {integrity: sha512-/3Aj5aiG+Iz8yDBJJb/GFDsptr9ONk3n1wZUIERuU+pVXMIslBaOnrTYJI5QVVXZ9jE494myQHiIvFrjQCBYeQ==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [android]
+
+  '@biomejs/cli-android-x64@2.6.9':
+    resolution: {integrity: sha512-erjbUpD9KJhzTsGHY9oStJ1bSiUJ1ikUXgdr0iOFoIAMiKqW+GdVdEqAlEyqiZA6CBiFqf2fV+g0AVl3hYOuYg==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [android]
+
+  '@biomejs/cli-darwin-arm64@2.6.9':
+    resolution: {integrity: sha512-fO67s0SF+lKGhNPQ7jUXiz0yXGl/1Qm3XTIn/4Hd2Z2z3ewQMrotWIMVdIPxZAgLJdQtRLBOzgsTRzTl981yWA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@biomejs/cli-darwin-x64@2.6.9':
+    resolution: {integrity: sha512-RdjT3Z6dLlii0x6EroncTp9jg38FMx2R1aeaaU4BbZ4//3TJ2mA2R39KMIrZYxHdHXcfv9X2V5hwKkXhg08w/g==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@biomejs/cli-linux-arm64-musl@2.6.9':
+    resolution: {integrity: sha512-qoG0R5MhJ8VFozVFZQC42V3qCI1TInDhL/YcPPg0oTzfv3vuh0ZDXj+2nNahq8gboHUMv7MWpGjRDLhpQatJ+A==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@biomejs/cli-linux-arm64@2.6.9':
+    resolution: {integrity: sha512-x73OpQSuQLuvNfzXWEjf0mK95NxlJQX4eG/jmuSrGWOz+/jcLUE4N/21yBu3n0X+wa8bJ3NsWNvmNacLnyc2CQ==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@biomejs/cli-linux-x64-musl@2.6.9':
+    resolution: {integrity: sha512-o73Sk1hCbGOFOrDlxtpHGIubnLwMXscT32+ujMwUyq9o0f4onxO7OznzkFgcZGbwKy1R3ohroOkqZDXqj1u29g==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@biomejs/cli-linux-x64@2.6.9':
+    resolution: {integrity: sha512-uVrqS0HDjRzFlx88ZpfmlZvJ+xIwTU+110vunzrYvZQ5OqXl/1ugMTNvAs61hejH7jh7iequKJwagRVarrYcSQ==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@biomejs/cli-win32-arm64@2.6.9':
+    resolution: {integrity: sha512-4yvNG4nQGJsJA/PTVAt8IBFXvY6hXk4UdjtPlTf4QTMIjH7ysOwBew78bKThkRv1eyRwH2mGLIk4lAZp8tfAdw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@biomejs/cli-win32-x64@2.6.9':
+    resolution: {integrity: sha512-mwarNc4GEg5JknsRaJDyJDFr4kICD7snsGM8yYFOoIHimSU1ekWNbcZ44QDa6/30fUZC9077wbBpXE8fp03aug==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [win32]
+
   '@cacheable/memory@2.2.0':
     resolution: {integrity: sha512-CTLKqLItRCEixEAewD3/j9DB3/o96gpTPD4eJ1v+DGOlxZRZncRQkGYqqnAGCscYd6RNeXfGeiuCphsPtqyIfQ==}
 
   '@cacheable/utils@2.5.0':
     resolution: {integrity: sha512-buipgOVDkkPXNR5+xBpDw7Zk2n1EvU7qBJCNUcL7rhQ//kfpOXPAvQ511Os0vpLYJ1pZnvudNytkQt2hst3wqA==}
+
+  '@djlint/darwin-arm64@1.54.0':
+    resolution: {integrity: sha512-u4kowEsd3Fn7fjPgpGW9k091gdfxreBriYo4eoZR0073StZEVNasN+vhNPo7g5Xidp2nvMafGC61plhyAL5M2g==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@djlint/darwin-x64@1.54.0':
+    resolution: {integrity: sha512-kwANjJSl0BTmffvGi9LjHJLSSt/3ddOD1bQAvfMsS9aq0DV93dLJd9ASf7VlAK69bcTNlOE/K9FneWTm2stY2Q==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@djlint/linux-arm64-gnu@1.54.0':
+    resolution: {integrity: sha512-JeB0VqPMkcrp+nCjP8fJqe2iaviSgiqn+7HPZ3XQlKuMLbUG9Jlyi9SzcXS2SFC2M5LjOXXAArtmg5/EZ/7J2Q==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@djlint/linux-arm64-musl@1.54.0':
+    resolution: {integrity: sha512-w6LaeIQ18krK1Fjt4yp/BwrEJNdqBe52fxDwWLlGkXTO0u9c7y8nl6i+Rf+Mg2L2Kj+bZCQvPJCl4ibF84EUWg==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@djlint/linux-ppc64-gnu@1.54.0':
+    resolution: {integrity: sha512-syIZtaRczYHRIJT3GbuGQpyVwi8CQoLjASV+b6uw58QEzbIlcjYbQ5cqiCDg4DhCCtdZRyLJajtDjCMYgnDRfw==}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@djlint/linux-riscv64-gnu@1.54.0':
+    resolution: {integrity: sha512-Vqeiz9Ydt64RTojmqb3diNfS8eFehXdkHOmYattBjoQ11HsORJ88gut35JveoVYXBQ8NOZtDfDpDwoPfv5rn4A==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@djlint/linux-s390x-gnu@1.54.0':
+    resolution: {integrity: sha512-tdo2Tq7l5lE3i1t++wy3GRgNq9+uEDNUsFUUCmJ38i/m38fOERglE4FySqQM7vXkjGOgFIhvV8rLBMlZbHcAPw==}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@djlint/linux-x64-gnu@1.54.0':
+    resolution: {integrity: sha512-1nDbf5Va786atcM25kso0DrCgmLmiDhHeo8WWdAjSbJhp8RFlCWnLniwVqdqLfkvJuwsgePKZYscvQ0YOzqROA==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@djlint/linux-x64-musl@1.54.0':
+    resolution: {integrity: sha512-NCG/n6AK42/gFa0kDtPn/md4AB/J6CMYrQ3y+Gh1VXeIJY5bSu5UxsOYQrZ6UOFraPks1cWjP7LTU1bEGbliew==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@djlint/win32-arm64@1.54.0':
+    resolution: {integrity: sha512-TXMtB2Qc3XQ656Cf3bjqzuDQVvYfSO9Zv4O3nNBpZ2YAVZ6XTus/EIbir0dOyOUAlPUpsyoqSiOEc1rWfpNvWA==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@djlint/win32-ia32@1.54.0':
+    resolution: {integrity: sha512-z4ui/of18Q+rvNd9q6A3KUY0szZ7Su2p60EDPWnwK7LV3PPaBkKnc+mb4VBv3tSmHjZc8QWhe7c7MRVe4A6ifA==}
+    cpu: [ia32]
+    os: [win32]
+
+  '@djlint/win32-x64@1.54.0':
+    resolution: {integrity: sha512-/XHacg+NqAgAPvg7AzC/yt4ooV7Ka4CJyUwUqqaCQj3g9IvrmhRYYTQ7jy0bkCiAeu9nvJaYz/2K1DbM2c7Sqg==}
+    cpu: [x64]
+    os: [win32]
 
   '@emnapi/core@2.0.0-beta.2':
     resolution: {integrity: sha512-MzCVoWtcg4Pm2B3je5mMvYMvj3MmBKw+fU7vbsJc9/iT8ip6/eYIHo/Dsm/mr+wsHB6SEyJDuxB09Yy6r/8+4A==}
@@ -480,6 +616,11 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
+  djlint@1.54.0:
+    resolution: {integrity: sha512-EyAZbO+sqC+KDjFcAU3S10hqf2jrwh4hfX6pF/6zEfCjyk8uh0Hmxre1L+WgyuJmjFZknbJSiifb1Fh9j4vj+Q==}
+    engines: {node: '>=16.9'}
+    hasBin: true
+
   enhanced-resolve@5.27.0:
     resolution: {integrity: sha512-Do6BB2xzlcc/odFg+XEYyneAx4T/WfywO71yw9ePS2tVfRsf7JVR4mUeELadIeHzixkzbG5DpluiEFPi2WGfYQ==}
     engines: {node: '>=10.13.0'}
@@ -758,16 +899,6 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-jinja-template@2.2.0:
-    resolution: {integrity: sha512-FVZtWvSW8RKvHToWHgI9j1eau7t2mekYoVKg7GdDS16QVOYM8f08yzVptBUvSXKQR2xJAXCLi0rGGvJGFtCUrA==}
-    peerDependencies:
-      prettier: ^3.0.0
-
-  prettier@3.10.1:
-    resolution: {integrity: sha512-70vp3ZUYoPlFbF9uiTdXHUUCGEIp7d4+6p+8DYbkm2jP7x/3i/paXVF6dopSI3zd/CEitrZN1rc4i85xWmmXlg==}
-    engines: {node: '>=14'}
-    hasBin: true
-
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -895,6 +1026,49 @@ packages:
 
 snapshots:
 
+  '@biomejs/biome@2.6.9':
+    optionalDependencies:
+      '@biomejs/cli-android-arm64': 2.6.9
+      '@biomejs/cli-android-x64': 2.6.9
+      '@biomejs/cli-darwin-arm64': 2.6.9
+      '@biomejs/cli-darwin-x64': 2.6.9
+      '@biomejs/cli-linux-arm64': 2.6.9
+      '@biomejs/cli-linux-arm64-musl': 2.6.9
+      '@biomejs/cli-linux-x64': 2.6.9
+      '@biomejs/cli-linux-x64-musl': 2.6.9
+      '@biomejs/cli-win32-arm64': 2.6.9
+      '@biomejs/cli-win32-x64': 2.6.9
+
+  '@biomejs/cli-android-arm64@2.6.9':
+    optional: true
+
+  '@biomejs/cli-android-x64@2.6.9':
+    optional: true
+
+  '@biomejs/cli-darwin-arm64@2.6.9':
+    optional: true
+
+  '@biomejs/cli-darwin-x64@2.6.9':
+    optional: true
+
+  '@biomejs/cli-linux-arm64-musl@2.6.9':
+    optional: true
+
+  '@biomejs/cli-linux-arm64@2.6.9':
+    optional: true
+
+  '@biomejs/cli-linux-x64-musl@2.6.9':
+    optional: true
+
+  '@biomejs/cli-linux-x64@2.6.9':
+    optional: true
+
+  '@biomejs/cli-win32-arm64@2.6.9':
+    optional: true
+
+  '@biomejs/cli-win32-x64@2.6.9':
+    optional: true
+
   '@cacheable/memory@2.2.0':
     dependencies:
       '@cacheable/utils': 2.5.0
@@ -906,6 +1080,42 @@ snapshots:
     dependencies:
       hashery: 1.5.1
       keyv: 5.6.0
+
+  '@djlint/darwin-arm64@1.54.0':
+    optional: true
+
+  '@djlint/darwin-x64@1.54.0':
+    optional: true
+
+  '@djlint/linux-arm64-gnu@1.54.0':
+    optional: true
+
+  '@djlint/linux-arm64-musl@1.54.0':
+    optional: true
+
+  '@djlint/linux-ppc64-gnu@1.54.0':
+    optional: true
+
+  '@djlint/linux-riscv64-gnu@1.54.0':
+    optional: true
+
+  '@djlint/linux-s390x-gnu@1.54.0':
+    optional: true
+
+  '@djlint/linux-x64-gnu@1.54.0':
+    optional: true
+
+  '@djlint/linux-x64-musl@1.54.0':
+    optional: true
+
+  '@djlint/win32-arm64@1.54.0':
+    optional: true
+
+  '@djlint/win32-ia32@1.54.0':
+    optional: true
+
+  '@djlint/win32-x64@1.54.0':
+    optional: true
 
   '@emnapi/core@2.0.0-beta.2':
     dependencies:
@@ -1284,6 +1494,21 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
+  djlint@1.54.0:
+    optionalDependencies:
+      '@djlint/darwin-arm64': 1.54.0
+      '@djlint/darwin-x64': 1.54.0
+      '@djlint/linux-arm64-gnu': 1.54.0
+      '@djlint/linux-arm64-musl': 1.54.0
+      '@djlint/linux-ppc64-gnu': 1.54.0
+      '@djlint/linux-riscv64-gnu': 1.54.0
+      '@djlint/linux-s390x-gnu': 1.54.0
+      '@djlint/linux-x64-gnu': 1.54.0
+      '@djlint/linux-x64-musl': 1.54.0
+      '@djlint/win32-arm64': 1.54.0
+      '@djlint/win32-ia32': 1.54.0
+      '@djlint/win32-x64': 1.54.0
+
   enhanced-resolve@5.27.0:
     dependencies:
       graceful-fs: 4.2.12
@@ -1534,12 +1759,6 @@ snapshots:
       source-map-js: 1.2.4
 
   prelude-ls@1.2.1: {}
-
-  prettier-plugin-jinja-template@2.2.0(prettier@3.10.1):
-    dependencies:
-      prettier: 3.10.1
-
-  prettier@3.10.1: {}
 
   punycode@2.3.1: {}
 

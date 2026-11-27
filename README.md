@@ -36,7 +36,8 @@ This repo contains the Zola site-generator and content for [anmorris.org](https:
 
 - [Vite](https://vite.dev) — frontend build tool
 - [TypeScript](https://www.typescriptlang.org) — typed JavaScript
-- [Prettier](https://prettier.io) — code formatter
+- [djLint](https://www.djlint.com/) — Tera template formatter, installed through pnpm
+- [Biome](https://biomejs.dev/) — JavaScript, TypeScript, JSON, and GraphQL formatter
 - [ESLint](https://eslint.org) — linter
 
 ## Prerequisites
@@ -46,6 +47,10 @@ This repo contains the Zola site-generator and content for [anmorris.org](https:
 - Node.js 24+
 
 ## Development Instructions
+
+### Formatting
+
+Run `pnpm format:djlint` for Tera templates, `pnpm format:biome` for JavaScript, TypeScript, JSON, and GraphQL, or `pnpm format` for both. Run `pnpm check:format` to check without writing changes. ESLint still handles linting via `pnpm check:lint`.
 
 ### Dev Server
 

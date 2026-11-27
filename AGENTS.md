@@ -15,7 +15,7 @@ This website is built using **Zola**, a fast Static Site Generator (SSG) written
 
 Packaging, interactive components, and styling are handled using **Vite**, **Tailwind**, **TypeScript**, **Lit**, **xstate**, and **pnpm**.
 
-Code linting and styling is handled by **Prettier** and **ESLint**.
+**djLint** formats Tera templates, **Biome** formats JavaScript, TypeScript, JSON, and GraphQL, and **ESLint** lints TypeScript.
 
 There are currently no unit tests to run.
 
