@@ -45,7 +45,7 @@ SPDX-License-Identifier: GPL-3.0-only
                         src="{{ get_url(path='bundle/' ~ main_entry.file) | safe }}"></script>
             {% endif %}
 
-            {% if page is defined and (page.extra.math_mode or section.extra.math_mode) %}
+            {% if (page is defined and page.extra.math_mode) or (section is defined and section.extra.math_mode) %}
                 {% if is_dev %}
                     <script type="module"
                             src="http://localhost:8081/themes/anmorris-2026/src/math.ts"></script>

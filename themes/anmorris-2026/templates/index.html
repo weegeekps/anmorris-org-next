@@ -10,5 +10,31 @@ SPDX-License-Identifier: GPL-3.0-only
 {% block main %}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
         <div>{{ section.content | safe }}</div>
+        <div>
+            <ul class="list-none">
+                {% for path in section.subsections %}
+                    {% set sub = get_section(path=path) %}
+                    <li>
+                        {% set sub_title = sub.title | lower ~ "/" %}
+                        {% if sub.extra.skip_link is defined and sub.extra.skip_link %}
+                            {{ sub_title }}
+                        {% else %}
+                            <a href="{{ sub.permalink | safe }}">{{ sub_title }}</a>
+                        {% endif %} — {{ sub.description }}
+                        {% if sub.extra.list_pages %}
+                            <ul class="list-none">
+                                {% for page in sub.pages %}
+                                    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if sub.extra.show_latest %}
+                            {% set latest_post = sub.pages[0] %}
+                            <p class="pl-4"><span class="italic">Latest Post:</span> <a href="{{ latest_post.permalink | safe }}">{{ latest_post.title }}</a></p>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 {% endblock main %}

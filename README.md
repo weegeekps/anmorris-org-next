@@ -25,6 +25,27 @@ This repo contains the Zola site-generator and content for [anmorris.org](https:
 > [!IMPORTANT]
 > Files in `content/` are never AI-generated or AI-edited. All site and blog content is written by hand.
 
+## Frontmatter Extras
+
+This project defines the following extras.
+
+| Extra | Type | Description |
+| --- | --- | --- |
+| `ai_assistance` | `String` | Indicates that AI assistance was used and explains how. |
+| `list_pages`| `Boolean` | Enables listing out the section pages on the home page. |
+| `math_mode` | `Boolean` | Enables KaTeX formatting for the page. |
+| `show_latest` | `Boolean` | Enables listing out the latest page on the home page. |
+| `skip_link` | `Boolean` | Skips writing the section link out on the home page. Use with `render = false`. |
+
+## Taxonomies
+
+This project uses the following taxonomies.
+
+| Taxonomy | Description |
+| --- | --- |
+| `authors` | A formal list of authors, in case there is ever a guest author. |
+| `topics` | Topics covered by the page. Intended for blog posts. |
+
 ## Dependencies
 
 ### Runtime

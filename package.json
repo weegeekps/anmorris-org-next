@@ -7,7 +7,7 @@
     "vite:dev": "vite",
     "vite:build": "tsc && vite build",
     "vite:preview": "vite preview",
-    "zola:dev": "zola serve --port 8080 --base-url http://localhost",
+    "zola:dev": "zola serve --drafts --port 8080 --base-url http://localhost",
     "zola:build": "zola build",
     "check:reuse": "reuse lint",
     "check:lint": "eslint **/src/**/*",

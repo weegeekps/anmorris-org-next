@@ -1,19 +1,23 @@
----
++++
 # SPDX-FileCopyrightText: 2026 Adam N. Morris
 #
 # SPDX-License-Identifier: CC-BY-SA-4.0
 # SPDX-License-Identifier: MIT
 
-title: "Zola Markdown Test Page"
-date: 2026-06-20
-description: "A comprehensive test of all Zola-supported Markdown features"
-tags: [markdown, test, zola]
-draft: false
-weight: 10
-extra:
-    author: "Site Author"
-    math_mode: true
----
+title = "Zola Markdown Test Page"
+description = "A comprehensive test of all Zola-supported Markdown features"
+date = 2026-06-20
+updated = 2026-12-27
+weight = 10
+draft = true
+
+[taxonomies]
+authors = ["Test Author"]
+topics = ["markdown", "test", "zola"]
+
+[extra]
+math_mode = true
++++
 
 # Zola Markdown Feature Test Page
 
@@ -326,7 +330,7 @@ Your front matter (YAML) was parsed by Zola. Available in templates:
 | `content`      | This entire rendered document | Zola variable        |
 | `path`         | test_page (derived)           | Zola variable        |
 
-You can access `{{ page.extra.author }}`, `{{ page.date }}`, etc. in templates.
+You can access `{{ page.taxonomies.authors[0] }}`, `{{ page.date }}`, etc. in templates.
 
 ---
 

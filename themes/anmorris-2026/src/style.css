@@ -148,7 +148,7 @@
   }
 
   a {
-    color: var(--color-slate-600);
+    color: var(--color-sky-800);
   }
 
   @media (hover: hover) {
